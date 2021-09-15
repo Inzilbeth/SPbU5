@@ -8,10 +8,10 @@ module Program =
         let solver = new Solver()
         let f  = new FirstFunction()
 
-        let A = -10.0
-        let B = 10.0
-        let N = 1000.0
-        let e = 0.00000001
+        let A = -1.2
+        let B = 1.0
+        let N = 1e3
+        let e = 1e-06
 
         let printPartition partition =
             let rec printPartitionLoop partition number =
@@ -38,12 +38,12 @@ module Program =
 
             printAnswerLoop answer 1
 
-        let partition = solver.partition f -10.0 10.0 100.0
+        let partition = solver.partition f A B N
 
         let bisectionAnswers      = solver.refineBisection f partition e
-        let newtonAnswers         = solver.refineBisection f partition e
-        let newtonModifiedAnswers = solver.refineBisection f partition e
-        let secantsAnswers        = solver.refineBisection f partition e
+        let newtonAnswers         = solver.refineNewton f partition e
+        let newtonModifiedAnswers = solver.refineNewtonModified f partition e
+        let secantsAnswers        = solver.refineSecants f partition e
 
         printfn "A = %A, B = %A, f(x) = %s, e = %A\n" A B (f :> IFunction).Name e
 

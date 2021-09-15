@@ -3,7 +3,7 @@
 type public Solver() =
 
     member public Solver.solve (f : IFunction) (A : int) (B : int) (epsilon : float32) (N : int) =
-        5
+        0
 
     member public Solver.partition (f : IFunction) A B N =
         let h = (B - A) / N
@@ -37,7 +37,7 @@ type public Solver() =
         let rec refineNewtonLoop previous starting step =
             let current = previous - f.compute(previous) / f.derivative(previous)
 
-            if (current - previous) < epsilon then
+            if (abs (current - previous)) < epsilon then
                 (starting, step, current, current - previous, (abs <| f.compute current))
             else
                 refineNewtonLoop current starting (step + 1)
@@ -48,7 +48,7 @@ type public Solver() =
         let rec refineNewtonModifiedLoop previous starting step =
             let current = previous - f.compute(previous) / f.derivative(starting)
 
-            if (current - previous) < epsilon then
+            if (abs (current - previous)) < epsilon then
                 (starting, step, current, current - previous, (abs <| f.compute current))
             else
                 refineNewtonModifiedLoop current starting (step + 1)
@@ -59,7 +59,7 @@ type public Solver() =
         let rec refineSecantsLoop previous current starting step =
             let next = current - (f.compute(current) / (f.compute(current) - f.compute(previous))) * (current - previous)
 
-            if (next - current) < epsilon then
+            if (abs (current - previous)) < epsilon then
                 (starting, step, next, next - current, (abs <| f.compute next))
             else
                 refineSecantsLoop current next starting (step + 1)
