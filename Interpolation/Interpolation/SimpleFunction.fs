@@ -1,6 +1,6 @@
 ﻿namespace Interpolation
 
-type public FirstFunction() =
+type public SimpleFunction() =
 
     interface IFunction with
         member this.Name =
