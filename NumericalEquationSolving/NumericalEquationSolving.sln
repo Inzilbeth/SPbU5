@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NumericalEquationSolving", "NumericalEquationSolving\NumericalEquationSolving.fsproj", "{27EABEB2-09B1-4A6F-8325-73ED18E5DBD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27EABEB2-09B1-4A6F-8325-73ED18E5DBD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27EABEB2-09B1-4A6F-8325-73ED18E5DBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27EABEB2-09B1-4A6F-8325-73ED18E5DBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27EABEB2-09B1-4A6F-8325-73ED18E5DBD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF49F5E8-8EF5-462C-8FF7-D3DA57747B46}
+	EndGlobalSection
+EndGlobal
