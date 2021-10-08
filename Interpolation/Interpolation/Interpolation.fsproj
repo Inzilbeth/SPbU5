@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="IFunction.fs" />
+    <Compile Include="SimpleFunction.fs" />
+    <Compile Include="Interpolator.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
